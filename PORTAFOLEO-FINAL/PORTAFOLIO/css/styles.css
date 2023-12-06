@@ -10,3 +10,41 @@ body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
+
+.wraper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #191c32;
+  color: #fff;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.brand span{
+  color: aqua;
+}
+
+.menu {
+  display: flex;
+  width: 50%;
+  justify-content: s;
+}
+
+
+.menu li {
+  list-style: none;
+}
+
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu .active{
+  color: aqua;
+}
