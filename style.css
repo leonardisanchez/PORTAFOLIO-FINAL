@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -10,7 +13,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper {
+.wrapper {  
   width: 100vw;
   height: 100vh;
   background-color: #191c32;
@@ -98,8 +101,9 @@ h1 {
   width: 230px;
   height: 310px;
   z-index: 1;
-  border-radius: 40%; 
+  border-radius: 45%; 
   object-fit: cover; 
+  margin-left: 40px; 
 }
 
 
@@ -164,6 +168,26 @@ h1 {
   color: #fff;
 }
 
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+  text-align: center; /* Alinea el texto al centro */
+}
+
+.container-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+}
+
+.contact-form {
+  max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  width: 100%;
+}
+
+
 .portfolio .container {
   width: 80vw;
   height: 80vh;
@@ -215,27 +239,24 @@ h1 {
 }
 
 
-.contact-section {
-  padding: 3em;
-}
 
 .container-contact {
   margin: 0 auto;
   display: flex;
   align-items: center;
 }
-
 .contact-section img {
-  width: 750px;
-  height: 700px;
+  width: 100px !important;
+  height: 100px !important;
   bottom: 0px;
 }
+
 
 .form-group {
   display: flex;
   flex-direction: column;
-  width: 30vw;
-  margin-top: 2em;
+  width: 80vw;
+  margin-top: 10em;
 }
 .form-group textarea {
   height: 150px;
@@ -446,4 +467,32 @@ h1 {
 
 .sotial-networks i {
   font-size: 1.5em;
+}
+
+.card {
+  position: relative; 
+  background-image: url('https://i.ibb.co/hZ2kMf7/28660545.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; 
+  padding: 20px; 
+}
+
+.card::before {
+  content: ""; /* Crea un pseudo-elemento para aplicar el filtro de desenfoque */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  backdrop-filter: blur(1px); /* Ajusta el valor de desenfoque según tus preferencias */
+  z-index: -1; /* Coloca el pseudo-elemento detrás del contenido principal */
+}
+
+/* Ajusta el color del texto para que sea legible en la imagen de fondo */
+.card__title h2,
+.card__proyect-links a,
+.project-details-button a {
+  color: white;
 }
